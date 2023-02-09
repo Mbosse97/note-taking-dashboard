@@ -9,7 +9,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const api = require('./routes/index');
-const { readFromFile, readAndAppend } = require('./helpers/fsUtils');
+const { readFromFile, readAndAppend } = require('./helpers/fsutils');
 
 const PORT = process.env.PORT || 3001;
 
