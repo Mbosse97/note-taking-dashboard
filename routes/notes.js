@@ -2,7 +2,7 @@
 const notes = require('express').Router();
 
 const path = require('path');
-const { readFromFile, readAndAppend, writeToFile } = require('../helpers/fsUtils');
+const { readFromFile, readAndAppend, writeToFile } = require('../helpers/fsutils');
 var uniqid = require('uniqid'); 
 let database = require('../db/db.json');
 const fs = require('fs');
