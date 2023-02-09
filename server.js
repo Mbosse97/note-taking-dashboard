@@ -6,12 +6,12 @@
 // create get request from write button to link to notes.html
 
 const express = require('express');
-const path = require('path')
-const fs = require('fs')
-const api = require('./routes/index')
-const { readFromFile, writeToFile, readAndAppend } = require('./helpers/fsUtils')
+const path = require('path');
+const fs = require('fs');
+const api = require('./routes/index');
+const { readFromFile, readAndAppend } = require('./helpers/fsUtils');
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 

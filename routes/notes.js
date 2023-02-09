@@ -38,5 +38,20 @@ notes.post('/', (req, res) => {
     }  
 });
 
+notes.delete('/:id', (req, res) => {
+    console.log("DELETE request to /api/notes made")
+
+    let id = req.params.id
+    console.log(`id = ${id}`)
+
+    let updatedDB = database.filter(item => item.id !== id)
+    console.log(`updatedDB = ${updatedDB}`)
+
+    writeToFile('./db/db.json', updatedDB) 
+    
+    database = updatedDB
+
+    res.json(updatedDB);
+})
 
 module.exports = notes;

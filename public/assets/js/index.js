@@ -89,10 +89,17 @@ const handleNoteDelete = (e) => {
     activeNote = {};
   }
 
+  // deleteNote(noteId).then(() => {
+  //   getAndRenderNotes();
+  //   renderActiveNote();
+  // });
+
+  //edit to the above code is critical for removing bugs with the delete button
   deleteNote(noteId).then(() => {
-    getAndRenderNotes();
-    renderActiveNote();
-  });
+    getAndRenderNotes()
+  }).then(() => {renderActiveNote()})
+  
+  
 };
 
 // Sets the activeNote and displays it
